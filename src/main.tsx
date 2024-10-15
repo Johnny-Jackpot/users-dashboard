@@ -6,6 +6,7 @@ import {
 } from "react-router-dom";
 import DashboardPage from "./pages/DashboardPage.tsx";
 import LoginPage from "./pages/LoginPage.tsx";
+import './index.css'
 
 const router = createBrowserRouter([
   {
