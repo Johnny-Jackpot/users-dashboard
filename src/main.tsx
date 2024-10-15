@@ -5,20 +5,17 @@ import {
   RouterProvider,
   Link,
 } from "react-router-dom";
+import DashboardPage from "./pages/DashboardPage.tsx";
+import LoginPage from "./pages/LoginPage.tsx";
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: (
-      <div>
-        <h1>Hello World</h1>
-        <Link to="about">About Us</Link>
-      </div>
-    ),
+    element: <DashboardPage />,
   },
   {
-    path: "about",
-    element: <div>About</div>,
+    path: "login",
+    element: <LoginPage />,
   },
 ]);
 
