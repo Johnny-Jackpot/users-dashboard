@@ -1,9 +1,20 @@
 import * as React from "react";
 
 const LoginPage: React.FC = () => {
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    const formData = new FormData(e.currentTarget);
+    const login = formData.get('login');
+    const password = formData.get('password');
+    if (!login || !password) {
+      alert('Provide login and password');
+      return;
+    }
+  };
+
   return (
     <div className="flex justify-center items-center h-dvh">
-      <form className="w-1/3">
+      <form className="w-1/3" onSubmit={handleSubmit}>
         <input
           type="text"
           name="login"
