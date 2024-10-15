@@ -22,9 +22,9 @@ const LoginPage: React.FC = () => {
         email: login,
         password,
       });
-
     } catch (e) {
-      console.log(e);
+      const error = e?.response?.data?.message;
+      alert(error || 'Something went wrong');
     } finally {
       setLoading(false);
     }
